@@ -62,8 +62,6 @@
 
     @include('website.layouts.footer')
 
-    <!-- scroll top button -->
-    <button class="scroltop fa fa-arrow-up style5" ></button>
 
 </div>
 
