@@ -358,11 +358,11 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .pull-left{
-    float: left;
+    float: right;
 }
 
 .pull-right{
-    float: right;
+    float: left;
 }
 
 
@@ -538,14 +538,14 @@ img {
     position: relative;
     display: block;
     font-size: 14px;
-    text-align: right;
+    text-align: left;
     line-height: 26px;
     font-weight: 500;
     margin-bottom: 4px;
 }
 
 .sec-title.light p{
-    color: #fff;
+    color: #000;
 }
 
 .sec-title.centred .shape{

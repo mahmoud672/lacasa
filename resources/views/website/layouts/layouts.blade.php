@@ -28,13 +28,19 @@
     <link href="{{assetPath("website/css/jquery.fancybox.min.css")}}" rel="stylesheet">
     <link href="{{assetPath("website/css/animate.css")}}" rel="stylesheet">
     <link href="{{assetPath("website/css/color.css")}}" rel="stylesheet">
-    <link href="{{assetPath("website/css/global.css")}}" rel="stylesheet">
-    <link href="{{assetPath("website/css/style.css")}}" rel="stylesheet">
 
-    <link href="{{assetPath("website/css/responsive.css")}}" rel="stylesheet">
+    <link href="{{assetPath("website/css/slick.css")}}" rel="stylesheet">
+    <link href="{{assetPath("website/css/slick-theme.css")}}" rel="stylesheet">
+    @if(currentLang() == 'en')
+        <link href="{{assetPath("website/css/global_en.css")}}" rel="stylesheet">
+        <link href="{{assetPath("website/css/style_en.css")}}" rel="stylesheet">
+    @endif
     @if(currentLang() == 'ar')
+        <link href="{{assetPath("website/css/global.css")}}" rel="stylesheet">
+        <link href="{{assetPath("website/css/style.css")}}" rel="stylesheet">
         <link href="{{assetPath("website/css/rtl.css")}}" rel="stylesheet">
     @endif
+    <link href="{{assetPath("website/css/responsive.css")}}" rel="stylesheet">
     @yield('canonical')
     <!-- end canonical links-->
 

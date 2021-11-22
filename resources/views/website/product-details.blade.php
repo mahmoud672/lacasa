@@ -368,15 +368,48 @@
                 </div>
             </div>
             <div class="col-lg-8 col-md-12 col-sm-12 content-side">
+                {{--<div class="property3-slide single-advance-property mb-4" >
+
+                    <div class="slider-for">
+                        @if($product->images)
+                            @foreach($product->images as $image)
+                                <a href="" class="item-slick"><img src="{{assetPath($image->path)}}" alt="Alt"></a>
+                            @endforeach
+                        @endif
+
+                    </div>
+                    <div class="slider-nav">
+                        @if($product->images)
+                            @foreach($product->images as $image)
+                                <div class="item-slick"><img src="{{assetPath($image->path)}}" alt="Alt"></div>
+                            @endforeach
+                        @endif
+
+                    </div>
+
+                </div>--}}
+
                 <div class="service-details-content">
                     <div class="content-one">
-                        <figure class="image-box"><img src="{{assetPath($product->image->path)}}" alt=""></figure>
+                        <div class="carousel-column">
+                            <div class="inner-column">
+                                <div class="single-item-carousel owl-carousel owl-theme">
+                                    @if($product->images)
+                                        @foreach($product->images as $image)
+                                            <div class="slide">
+                                                <div class="image">
+                                                    <img src="{{assetPath($image->path)}}" alt="" />
+                                                </div>
+                                            </div>
+                                        @endforeach
+                                    @endif
+                                </div>
+                            </div>
+                        </div>
+                        {{--<figure class="image-box"><img src="{{assetPath($product->image->path)}}" alt=""></figure>--}}
                         <div class="text">
                             <h2>{{$product->lang->title}}</h2>
                             {!! $product->lang->description !!}
-
-
-
 
                         </div>
                     </div>
@@ -397,7 +430,6 @@
 
 
                 </div>
-            </div>
         </div>
     </div>
 </section>

@@ -39,249 +39,6 @@
 
 @section('content')
 
-{{--
-<div class="dez-bnr-inr overlay-black-middle" style="background-image:url({{assetPath("website/images/background/bg4.jpg")}});">
-    <div class="container">
-        <div class="dez-bnr-inr-entry">
-            <h1 class="text-white">{{__("trans.service_details")}}</h1>
-        </div>
-    </div>
-</div>
-<div class="breadcrumb-row">
-    <div class="container">
-        <ul class="list-inline">
-            <li><a href="{{url("/")}}">{{__("trans.home")}}</a></li>
-            <li>{{__("trans.services")}}</li>
-            <li>{{$serviceSingle->lang->title}}</li>
-        </ul>
-    </div>
-</div>
-
-
-
-<div class="service_details overlay-white-middle" style="background-image:url({{assetPath("website/images/background/bg5.png")}}); background-position:right center; background-repeat:no-repeat; background-size: auto 100%;">
-    <div class="container">
-        <div class="image-layer">
-
-        </div>
-        <div class="row">
-            <div class="col-lg-6 service-details">
-                <div class="text-p">
-                    <p> {{$serviceSingle->lang->title}} </p>
-
-
-                </div>
-                --}}{{--<p style="font-weight: bolder;line-height: 1.9;">
-                    الحركة بركة , بس هتتحرك إزاى ورقبتك بتوجعك !؟
-                    طب ايه هي أسباب الإصابة بالإنزلاق الغضروفي العنقي ؟
-                    1. حمل أشياء ثقيلة بطريقة خاطئة .
-                    2. ضعف عضلات الرقبة أو الظهر سواء لعوامل وراثية أو مكتسبة .
-                    3. التقدم في العمر .
-                    4. السمنة المفرطة .
-                    الحركة بركة , بس هتتحرك إزاى ورقبتك بتوجعك !؟
-                    طب ايه هي أسباب الإصابة بالإنزلاق الغضروفي العنقي ؟
-                    1. حمل أشياء ثقيلة بطريقة خاطئة .
-                    2. ضعف عضلات الرقبة أو الظهر سواء لعوامل وراثية أو مكتسبة .
-                    3. التقدم في العمر .
-                    4. السمنة المفرطة
-                </p>--}}{{--
-                {!! $serviceSingle->lang->description !!}
-            </div>
-            <div class="col">
-                <div class="slider-home carl">
-                    <div id="myRotator" class="banner-rotator service_details_wraper">
-                        @if(count($serviceSingle->images) > 0)
-                            <ul class="slides">
-                                @foreach($serviceSingle->images as $image)
-                                    <li data-effect="push" data-columns="6" data-direction="down" data-alternate="true" data-depth="0">
-                                        <a href="#">
-                                            <img src="{{assetPath($image->path)}}" data-src="{{assetPath($image->path)}}" data-thumb="{{assetPath("website/images/thumbs/thumb2.jpg")}}"
-                                                 title="3D abstract art" alt="" />
-                                        </a>
-                                    </li>
-                                @endforeach
-                               --}}{{-- <li data-effect="push" data-columns="6" data-direction="down" data-alternate="true" data-depth="0">
-                                    <a href="#">
-                                        <img src="./images/our-work/pic2.jpg" data-src="./images/main-slider/slide1.jpg" data-thumb="images/thumbs/thumb2.jpg"
-                                             title="3D abstract art" alt="" />
-                                    </a>
-                                </li>
-                                <li data-effect="random" data-rows="5" data-direction="down" data-order="down" data-depth="1000"
-                                    data-shape-depth="10">
-                                    <a href="#">
-                                        <img src="./images/our-work/pic3.jpg" data-src="./images/main-slider/slide2.jpg" data-thumb="images/thumbs/thumb2.jpg"
-                                             title="krazy kartoons" alt="" />
-                                    </a>
-                                </li>
-                                <li data-effect="zoom" data-columns="5" data-rows="3" data-direction="random" data-order="downRight"
-                                    data-depth="1000">
-                                    <a href="#">
-                                        <img src="./images/our-work/pic4.jpg" data-src="./images/main-slider/slide3.jpg" data-thumb="images/thumbs/thumb2.jpg"
-                                             title="say it in print" alt="" />
-                                    </a>
-                                </li>--}}{{--
-
-                            </ul>
-
-                        @else
-                            <li data-effect="push" data-columns="6" data-direction="down" data-alternate="true" data-depth="0">
-                                <a href="#">
-                                    <img src="{{assetPath($serviceSingle->image->path)}}" data-src="{{assetPath($serviceSingle->image->path)}}" data-thumb="{{assetPath("website/images/thumbs/thumb2.jpg")}}"
-                                         title="3D abstract art" alt="" />
-                                </a>
-                            </li>
-
-                        @endif
-
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<!-- Client logo -->
-<div class="section-full dez-we-find bg-img-fix client-logo-area">
-    <div class="container">
-        <div class="section-content">
-            <div class="client-logo-carousel owl-carousel owl-btn-center-lr">
-                @if($clients)
-                    @foreach($clients as $client)
-                        <div class="item">
-                            <div class="ow-client-logo">
-                                <div class="client-logo"><a href="#"><img src="{{assetPath($client->image->path)}}" alt=""></a></div>
-                            </div>
-                        </div>
-                    @endforeach
-                @endif
-
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Client logo END -->
-
-<!-- contact area -->
-<a href="tel:+"></a>
-<div class="section-full content-inner bg-white contact-style-1">
-    <div class="container">
-        <div class="row">
-            <!-- Left part start -->
-            <div class="col-lg-8">
-                <div class="p-a30 bg-gray clearfix m-b30 ">
-                    <h2>{{__("trans.message_us")}}</h2>
-                    <div class="dzFormMsg"></div>
-                    <form method="post" class="dzForm" action="{{url("/contact")}}">
-                        @csrf
-                        <input type="hidden" name="came_from" value="" id="came_from">
-                        <input type="hidden" value="Contact" name="dzToDo" >
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <div class="input-group">
-                                        <input name="name" type="text" required class="form-control" placeholder="{{__("trans.form_name")}}*" value="{{old("name")}}">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <div class="input-group">
-                                        <input name="email" type="email" class="form-control" required  placeholder="{{__("trans.email")}}*" value="{{old("email")}}">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <div class="input-group">
-                                        <input name="phone" type="text" required class="form-control" placeholder="{{__("trans.phone")}}*" value="{{old("phone")}}">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <div class="input-group">
-                                        <input name="title" type="text" required class="form-control" placeholder="{{__("trans.message_title")}}*" value="{{old("title")}}">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="form-group">
-                                    <div class="input-group">
-                                        <textarea name="message" rows="4" class="form-control" required placeholder="{{__("trans.message")}}...">{{old("message")}}</textarea>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-12">
-                                <div class="form-group">
-                                    <div class="input-group">
-                                        <div class="g-recaptcha" data-sitekey="6LefsVUUAAAAADBPsLZzsNnETChealv6PYGzv3ZN" data-callback="verifyRecaptchaCallback" data-expired-callback="expiredRecaptchaCallback"></div>
-                                        <input class="form-control d-none" style="display:none;" data-recaptcha="true" required data-error="يرجي كتابة الكابتشا">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <button name="submit" type="submit" value="Submit" class="site-button "> <span>{{__("trans.send")}}</span> </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <!-- Left part END -->
-            <!-- right part start -->
-            <div class="col-lg-4 d-lg-flex">
-                <div class="p-a30 m-b30 border-1 contact-area align-self-stretch">
-                    <h2 class="m-b10">تسجيل سرع</h2>
-                    <p>لو عندك اي استفسار بسيط نقدر نجاوبك عليه</p>
-                    <ul class="no-margin">
-                        <li class="icon-bx-wraper left m-b30">
-                            <div class="icon-bx-xs bg-primary"> <a href="#" class="icon-cell"><i class="fa fa-map-marker"></i></a> </div>
-                            <div class="icon-content">
-                                <h6 class="text-uppercase m-tb0 dez-tilte">{{__("trans.address")}}:</h6>
-                                <p>{{$contact->address()}}</p>
-                            </div>
-                        </li>
-                        <li class="icon-bx-wraper left  m-b30">
-                            <div class="icon-bx-xs bg-primary"> <a href="#" class="icon-cell"><i class="fa fa-envelope"></i></a> </div>
-                            <div class="icon-content">
-                                <h6 class="text-uppercase m-tb0 dez-tilte">{{__("trans.email")}}:</h6>
-                                <p>{{$contact->email}}</p>
-                            </div>
-                        </li>
-                        <li class="icon-bx-wraper left">
-                            <div class="icon-bx-xs bg-primary"> <a href="#" class="icon-cell"><i class="fa fa-phone"></i></a> </div>
-                            <div class="icon-content">
-                                <h6 class="text-uppercase m-tb0 dez-tilte">{{__("trans.phone")}}</h6>
-                                <p>{{$contact->phone}}</p>
-                            </div>
-                        </li>
-                    </ul>
-                    <div class="m-t20">
-                        <ul class="dez-social-icon dez-social-icon-lg">
-                            <li><a href="javascript:void(0);" class="fa fa-facebook bg-primary"></a></li>
-                            <li><a href="javascript:void(0);" class="fa fa-twitter bg-primary"></a></li>
-                            <li><a href="javascript:void(0);" class="fa fa-linkedin bg-primary"></a></li>
-                            <li><a href="javascript:void(0);" class="fa fa-pinterest-p bg-primary"></a></li>
-                            <li><a href="javascript:void(0);" class="fa fa-google-plus bg-primary"></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <!-- right part END -->
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <!-- Map part start -->
-                <h2>{{__("trans.location")}}</h2>
-                <iframe src="{{$contact->location}}" style="border:0; width:100%; height:400px;" allowfullscreen></iframe>
-                <!-- Map part END -->
-            </div>
-        </div>
-    </div>
-</div>
-<!-- contact area  END -->--}}
-
 
 <!--Page Title-->
 <section class="page-title" style="background-image: url({{assetPath("website/images/background/page-title.jpg")}});">
@@ -327,26 +84,7 @@
                                         </li>
                                     @endforeach
                                 @endif
-                                {{--<li>
-                                    <h5><a href="service-details.html">ستائر رول </a></h5>
-                                    <span class="line"></span>
-                                </li>
-                                <li class="active">
-                                    <h5><a href="service-details.html">اقمشة</a></h5>
-                                    <span class="line"></span>
-                                </li>
-                                <li>
-                                    <h5><a href="service-details.html">خدمة 3</a></h5>
-                                    <span class="line"></span>
-                                </li>
-                                <li>
-                                    <h5><a href="service-details.html">خدمة 4</a></h5>
-                                    <span class="line"></span>
-                                </li>
-                                <li>
-                                    <h5><a href="service-details.html">خدمة 5</a></h5>
-                                    <span class="line"></span>
-                                </li>--}}
+
                             </ul>
                         </div>
                     </div>
@@ -390,13 +128,25 @@
             <div class="col-lg-8 col-md-12 col-sm-12 content-side">
                 <div class="service-details-content">
                     <div class="content-one">
-                        <figure class="image-box"><img src="{{assetPath($serviceSingle->image->path)}}" alt=""></figure>
+                        <div class="carousel-column">
+                            <div class="inner-column">
+                                <div class="single-item-carousel owl-carousel owl-theme">
+                                    @if($serviceSingle->images)
+                                        @foreach($serviceSingle->images as $image)
+                                            <div class="slide">
+                                                <div class="image">
+                                                    <img src="{{assetPath($image->path)}}" alt="" />
+                                                </div>
+                                            </div>
+                                        @endforeach
+                                    @endif
+                                </div>
+                            </div>
+                        </div>
+                        {{--<figure class="image-box"><img src="{{assetPath($product->image->path)}}" alt=""></figure>--}}
                         <div class="text">
                             <h2>{{$serviceSingle->lang->title}}</h2>
                             {!! $serviceSingle->lang->description !!}
-
-
-
 
                         </div>
                     </div>
